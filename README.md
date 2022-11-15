@@ -53,4 +53,5 @@ src
   * PDF.js：[官網](https://mozilla.github.io/pdf.js/)、[GitHub](https://github.com/mozilla/pdf.js/)
   * fabric.js：[官網](http://fabricjs.com/)、[GitHub](https://github.com/fabricjs/fabric.js)
   * jsPDF：[Documentation](http://raw.githack.com/MrRio/jsPDF/master/docs/index.html)、[GitHub](https://github.com/parallax/jsPDF)
-  * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)
+  * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)、[Online Lottie JSON Editor](https://lottiefiles.com/tools/json-editor)
+
