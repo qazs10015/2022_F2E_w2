@@ -6,7 +6,7 @@
 
 作品採用設計師[K-T](https://2022.thef2e.com/users/12061579703802991521)的[Figma 設計稿](https://www.figma.com/file/6ZjDFQSrwRy6OUAXDmJNhz/%E5%B0%8F%E7%B6%A0%E7%B0%BD?node-id=0%3A1)
 
-[Demo](https://qazs10015.github.io/2022_F2E_w1/)
+[Demo](https://qazs10015.github.io/2022_F2E_w2/)
 
 
 ## 系統說明
