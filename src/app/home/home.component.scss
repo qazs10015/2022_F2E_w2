@@ -1,0 +1,211 @@
+@import "mixin";
+
+.container {
+  // overflow: hidden;
+  margin: 0 55px;
+  @include tablet {
+    margin: 3rem 140px 0 140px;
+    height: 95vh;
+  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  // width: 100%;
+  .banner {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    .logo {
+      background-image: url("../../assets/images/logo_lg.png");
+      background-repeat: no-repeat;
+      background-position: bottom 0px left 0px;
+      width: 100%;
+      height: 89px;
+      @include tablet {
+        background-image: url("../../assets/images/logo_md.png");
+      }
+    }
+    .historyBtn {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .uploadArea {
+    position: absolute;
+    top: 100px;
+    background-color: var(--white);
+    border: 2px dashed var(--grey);
+    border-radius: 26px;
+    width: 299px;
+    height: 384px;
+    background-image: url("../../assets/images/files_sm.png");
+    background-repeat: no-repeat;
+    background-position: top 42.5px left 82.5px;
+    @include pc {
+    }
+    @include tablet {
+      width: 547px;
+      height: 567px;
+      background-image: url("../../assets/images/files_md.png");
+
+      background-position: top 78.5px left 161px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .uploadBtn {
+      color: var(--white);
+      width: 209px;
+      @include tablet {
+        margin-top: 6rem;
+        width: 360px;
+      }
+      height: 60px;
+      border: 0;
+      border-radius: 16px;
+    }
+    .uploadNote {
+      font-size: 14px;
+      margin-top: 15px;
+      color: var(--primary);
+    }
+    .decorations {
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      width: 100%;
+      @include tablet {
+        bottom: -200px;
+        left: 2rem;
+      }
+
+      .floor_1 {
+        background-image: url("../../assets/images/floor_sm_1.png");
+        background-repeat: no-repeat;
+        width: 355px;
+        height: 59px;
+        position: absolute;
+        left: -18px;
+        bottom: -87px;
+        @include tablet {
+          background-image: url("../../assets/images/floor_md_1.png");
+          width: 684px;
+          height: 114px;
+          left: -94px;
+          bottom: -88px;
+        }
+
+        @include pc {
+        }
+      }
+
+      .plant_1 {
+        background-image: url("../../assets/images/plant_sm_1.png");
+        background-repeat: no-repeat;
+        width: 76px;
+        height: 127px;
+        position: absolute;
+        left: 172px;
+        bottom: -65px;
+        @include tablet {
+          background-image: url("../../assets/images/plant_md_1.png");
+          width: 147px;
+          height: 245px;
+          left: 276px;
+          bottom: -50px;
+        }
+        @include pc {
+        }
+      }
+
+      .bag_1 {
+        background-image: url("../../assets/images/bag_sm.png");
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 27px;
+        position: absolute;
+        left: 217px;
+        bottom: -70px;
+        @include tablet {
+          background-image: url("../../assets/images/bag_md.png");
+          width: 41px;
+          height: 52px;
+          left: 363px;
+          bottom: -63px;
+        }
+        @include pc {
+        }
+      }
+
+      .woman_1 {
+        background-image: url("../../assets/images/woman_sm_1.png");
+        background-repeat: no-repeat;
+        width: 189px;
+        height: 268px;
+        position: absolute;
+        left: -34px;
+        bottom: -125px;
+
+        @include tablet {
+          background-image: url("../../assets/images/woman_md_1.png");
+          width: 273px;
+          height: 388px;
+          left: -115px;
+          bottom: -34px;
+        }
+        @include pc {
+        }
+      }
+
+      .woman_2 {
+        background-image: url("../../assets/images/woman_sm_2.png");
+        background-repeat: no-repeat;
+        width: 130px;
+        height: 218px;
+        position: absolute;
+        left: 92px;
+        bottom: -118px;
+        @include tablet {
+          background-image: url("../../assets/images/woman_md_2.png");
+          width: 186px;
+          height: 315px;
+          left: 120px;
+          bottom: -49px;
+        }
+        @include pc {
+        }
+      }
+
+      .woman_3 {
+        background-image: url("../../assets/images/woman_sm_3.png");
+        background-repeat: no-repeat;
+        width: 142px;
+        height: 248px;
+        position: absolute;
+        right: -48px;
+        bottom: -116px;
+        @include tablet {
+          background-image: url("../../assets/images/woman_md_3.png");
+          width: 206px;
+          height: 362px;
+          right: -2px;
+          bottom: -21px;
+        }
+        @include pc {
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    font-size: 12px;
+  }
+}
