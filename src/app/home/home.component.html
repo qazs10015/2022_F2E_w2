@@ -4,20 +4,33 @@
     <div class="historyBtn"><a [routerLink]="'/history'">歷史紀錄</a></div>
   </section>
 
+  <section class="uploadArea_pc">
+    <div class="version"><span>免費試用版</span></div>
+    <div class="summary">
+      <div class="title">小綠簽</div>
+      <div class="content">
+        護樹、永續、減碳的綠色生活 響應環保無紙化電子簽署， 省時便利又環保。
+      </div>
+    </div>
+  </section>
+
   <section class="uploadArea">
     <button type="button" class="gradient uploadBtn" (click)="uploader.click()">
       選擇檔案
       <input type="file" hidden #uploader (change)="onUpload($event)" />
     </button>
+    <p class="uploadNote_pc">或拖曳檔案到此處</p>
     <p class="uploadNote">(限10MB 內的PDF或JPG檔)</p>
-    <div class="decorations">
-      <div class="floor_1"></div>
-      <div class="plant_1"></div>
-      <div class="bag_1"></div>
-      <div class="woman_1"></div>
-      <div class="woman_2"></div>
-      <div class="woman_3"></div>
+  </section>
+  <section>
+    <div class="peopleLayout">
+      <div class="people"></div>
     </div>
+  </section>
+  <section class="decorations">
+    <div class="floor"></div>
+    <div class="leafrightTop"></div>
+    <div class="leafleftBottom"></div>
   </section>
 
   <section class="footer">小綠簽 &copy; Code: Junyu / Design: KT</section>

@@ -1,23 +1,25 @@
 @import "mixin";
 
 .container {
-  // overflow: hidden;
   margin: 0 55px;
+  height: 95vh;
   @include tablet {
-    margin: 3rem 140px 0 140px;
+    margin: 2rem 8rem 0 8rem;
     height: 95vh;
+  }
+  @include pc {
+    margin: 0 auto;
   }
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  // width: 100%;
   .banner {
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+
     .logo {
       background-image: url("../../assets/images/logo_lg.png");
       background-repeat: no-repeat;
@@ -27,10 +29,75 @@
       @include tablet {
         background-image: url("../../assets/images/logo_md.png");
       }
+      @include pc {
+        margin-left: 40px;
+        background-image: url("../../assets/images/logo_lg.png");
+      }
     }
+
     .historyBtn {
+      z-index: 1;
+      cursor: pointer;
       width: 100%;
       text-align: right;
+      @include pc {
+        margin-right: 142px;
+        border: 2px solid #1c8b6a;
+        border-radius: 16px;
+        width: 136px;
+        padding: 10px;
+        text-align: center;
+        a {
+          display: block;
+          width: 100%;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+  .uploadArea_pc {
+    display: none;
+    @include pc {
+      display: block;
+      position: absolute;
+      width: 90vw;
+      height: 73vh;
+      top: 6rem;
+      background: rgba(240, 240, 240, 0.58);
+      border-radius: 34px;
+      .version {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 24px;
+        position: absolute;
+        width: 225px;
+        height: 62px;
+        background: linear-gradient(180deg, #35a483 0%, #077854 100%);
+        border-radius: 34px 0px;
+        top: 0;
+        left: 0;
+      }
+      .summary {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 11rem;
+        left: 3rem;
+        .title {
+          text-align: left;
+          color: var(--primary);
+          font-size: 50px;
+          font-weight: bold;
+          width: 100%;
+        }
+        .content {
+          width: 278px;
+        }
+      }
     }
   }
 
@@ -45,14 +112,22 @@
     background-image: url("../../assets/images/files_sm.png");
     background-repeat: no-repeat;
     background-position: top 42.5px left 82.5px;
-    @include pc {
-    }
+
     @include tablet {
       width: 547px;
       height: 567px;
       background-image: url("../../assets/images/files_md.png");
 
       background-position: top 78.5px left 161px;
+    }
+    @include pc {
+      background-image: url("../../assets/images/files_lg.png");
+
+      background-position: top 29.5px left 145.5px;
+      width: 417px;
+      height: 376px;
+      top: 136px;
+      right: 235px;
     }
 
     display: flex;
@@ -66,140 +141,95 @@
         margin-top: 6rem;
         width: 360px;
       }
+      @include pc {
+        width: 227px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
       height: 60px;
       border: 0;
       border-radius: 16px;
     }
+    .uploadNote_pc {
+      display: none;
+      @include pc {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+    }
     .uploadNote {
       font-size: 14px;
-      margin-top: 15px;
       color: var(--primary);
     }
-    .decorations {
+  }
+
+  .peopleLayout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .people {
       position: absolute;
-      bottom: -45px;
+      background-image: url("../../assets/images/people_sm.png");
+      width: 362px;
+      height: 228px;
+      // left: -2rem;
+      top: 20rem;
+    }
+
+    @include tablet {
+      .people {
+        background-image: url("../../assets/images/people_md.png");
+        width: 696px;
+        height: 438px;
+        margin: 0 auto;
+        // left: -5rem;
+        top: 28rem;
+      }
+      // bottom: -200px;
+      // left: 2rem;
+    }
+
+    @include pc {
+      top: unset;
+      left: unset;
+      .people {
+        background-image: url("../../assets/images/people.png");
+        width: 670px;
+        height: 460px;
+      }
+    }
+  }
+
+  @include pc {
+    .floor {
+      background-image: url("../../assets/images/floor.png");
+      width: 243px;
+      height: 63px;
+      position: absolute;
       left: 0;
-      width: 100%;
-      @include tablet {
-        bottom: -200px;
-        left: 2rem;
-      }
-
-      .floor_1 {
-        background-image: url("../../assets/images/floor_sm_1.png");
-        background-repeat: no-repeat;
-        width: 355px;
-        height: 59px;
-        position: absolute;
-        left: -18px;
-        bottom: -87px;
-        @include tablet {
-          background-image: url("../../assets/images/floor_md_1.png");
-          width: 684px;
-          height: 114px;
-          left: -94px;
-          bottom: -88px;
-        }
-
-        @include pc {
-        }
-      }
-
-      .plant_1 {
-        background-image: url("../../assets/images/plant_sm_1.png");
-        background-repeat: no-repeat;
-        width: 76px;
-        height: 127px;
-        position: absolute;
-        left: 172px;
-        bottom: -65px;
-        @include tablet {
-          background-image: url("../../assets/images/plant_md_1.png");
-          width: 147px;
-          height: 245px;
-          left: 276px;
-          bottom: -50px;
-        }
-        @include pc {
-        }
-      }
-
-      .bag_1 {
-        background-image: url("../../assets/images/bag_sm.png");
-        background-repeat: no-repeat;
-        width: 21px;
-        height: 27px;
-        position: absolute;
-        left: 217px;
-        bottom: -70px;
-        @include tablet {
-          background-image: url("../../assets/images/bag_md.png");
-          width: 41px;
-          height: 52px;
-          left: 363px;
-          bottom: -63px;
-        }
-        @include pc {
-        }
-      }
-
-      .woman_1 {
-        background-image: url("../../assets/images/woman_sm_1.png");
-        background-repeat: no-repeat;
-        width: 189px;
-        height: 268px;
-        position: absolute;
-        left: -34px;
-        bottom: -125px;
-
-        @include tablet {
-          background-image: url("../../assets/images/woman_md_1.png");
-          width: 273px;
-          height: 388px;
-          left: -115px;
-          bottom: -34px;
-        }
-        @include pc {
-        }
-      }
-
-      .woman_2 {
-        background-image: url("../../assets/images/woman_sm_2.png");
-        background-repeat: no-repeat;
-        width: 130px;
-        height: 218px;
-        position: absolute;
-        left: 92px;
-        bottom: -118px;
-        @include tablet {
-          background-image: url("../../assets/images/woman_md_2.png");
-          width: 186px;
-          height: 315px;
-          left: 120px;
-          bottom: -49px;
-        }
-        @include pc {
-        }
-      }
-
-      .woman_3 {
-        background-image: url("../../assets/images/woman_sm_3.png");
-        background-repeat: no-repeat;
-        width: 142px;
-        height: 248px;
-        position: absolute;
-        right: -48px;
-        bottom: -116px;
-        @include tablet {
-          background-image: url("../../assets/images/woman_md_3.png");
-          width: 206px;
-          height: 362px;
-          right: -2px;
-          bottom: -21px;
-        }
-        @include pc {
-        }
-      }
+      bottom: 9rem;
+    }
+    .leafrightTop {
+      background-image: url("../../assets/images/leaf_right_top.png");
+      width: 122px;
+      height: 255px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .leafleftBottom {
+      background-image: url("../../assets/images/leaf_left_bottom.png");
+      width: 150px;
+      height: 305px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
   }
 
@@ -207,5 +237,8 @@
     position: absolute;
     bottom: 0px;
     font-size: 12px;
+    @include pc {
+      right: 1rem;
+    }
   }
 }
