@@ -54,4 +54,5 @@ src
   * fabric.js：[官網](http://fabricjs.com/)、[GitHub](https://github.com/fabricjs/fabric.js)
   * jsPDF：[Documentation](http://raw.githack.com/MrRio/jsPDF/master/docs/index.html)、[GitHub](https://github.com/parallax/jsPDF)
   * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)、[Online Lottie JSON Editor](https://lottiefiles.com/tools/json-editor)
+  * sweetalert2：[npm](https://www.npmjs.com/package/sweetalert2)
 
