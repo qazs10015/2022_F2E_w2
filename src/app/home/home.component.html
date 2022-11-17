@@ -1,7 +1,7 @@
 <div class="container">
   <section class="banner">
     <div class="logo"></div>
-    <div class="historyBtn"><a [routerLink]="'/history'">歷史紀錄</a></div>
+    <!-- <div class="historyBtn"><a [routerLink]="'/history'">歷史紀錄</a></div> -->
   </section>
 
   <section class="uploadArea_pc">
@@ -17,10 +17,16 @@
   <section class="uploadArea">
     <button type="button" class="gradient uploadBtn" (click)="uploader.click()">
       選擇檔案
-      <input type="file" hidden #uploader (change)="onUpload($event)" />
+      <input
+        type="file"
+        hidden
+        #uploader
+        accept="application/pdf"
+        (change)="onUpload($event)"
+      />
     </button>
     <p class="uploadNote_pc">或拖曳檔案到此處</p>
-    <p class="uploadNote">(限10MB 內的PDF或JPG檔)</p>
+    <p class="uploadNote">(限10MB 內的PDF)</p>
   </section>
   <section>
     <div class="peopleLayout">

@@ -1,0 +1,9 @@
+<div class="dialog" *ngIf="dialogConfig.isShow">
+  <ng-lottie
+    width="132px"
+    height="132px"
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+  ></ng-lottie>
+  <div>{{ displayText }}</div>
+</div>

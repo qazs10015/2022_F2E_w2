@@ -33,3 +33,16 @@ a {
   text-decoration: none;
   color: var(--black);
 }
+
+// alert 訊息專用
+.alertTitle {
+  font-size: 18px !important;
+}
+
+.alertConfirmButton {
+  width: 229px;
+  height: 56px;
+  color: var(--white) !important;
+  background: #1c8b6a !important;
+  border-radius: 16px !important;
+}
