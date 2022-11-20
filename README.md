@@ -53,4 +53,5 @@ src
   * jsPDF：[Documentation](http://raw.githack.com/MrRio/jsPDF/master/docs/index.html)、[GitHub](https://github.com/parallax/jsPDF)
     > 儲存自定義的 pdf
   * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)、[Online Lottie JSON Editor](https://lottiefiles.com/tools/json-editor)
+    > 讓 json 跑動畫的套件
   * sweetalert2：[npm](https://www.npmjs.com/package/sweetalert2)
