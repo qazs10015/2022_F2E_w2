@@ -43,7 +43,7 @@ export class AnimeComponent implements OnInit, OnChanges {
 
     this.options = {
       ...this.options, // In case you have other properties that you want to copy
-      path: `/assets/animations/${dialogConfig.animationName}.json`,
+      path: `${environment.baseUrl}/assets/animations/${dialogConfig.animationName}.json`,
     };
 
   }
