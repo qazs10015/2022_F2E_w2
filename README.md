@@ -19,8 +19,6 @@
 
 ## 資料夾說明
 
-依照設計師的設計稿，拆成 9 等份，名稱以 story-board1、story-board2 依此類推
-
 ```
 src
  | --- app
