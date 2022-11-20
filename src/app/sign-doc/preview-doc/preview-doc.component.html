@@ -1,0 +1,31 @@
+<section class="top">
+  <div class="pages">
+    <button type="button" (click)="turnPage(turnPageAction.PREVIOUS)">
+      <span class="material-symbols-outlined"> chevron_left </span>
+    </button>
+    <p>{{ pageIdx }}/{{ pageCount }}</p>
+    <button type="button">
+      <span
+        class="material-symbols-outlined"
+        (click)="turnPage(turnPageAction.NEXT)"
+      >
+        navigate_next
+      </span>
+    </button>
+  </div>
+  <button class="btnSign" type="button" (click)="savePDF()">完成簽署</button>
+</section>
+<section #pdfContent class="content">
+  <canvas id="canvas"></canvas>
+  <pdf-viewer
+    [style.visibility]="'hidden'"
+    #pdfViewer
+    [src]="pdfSrc"
+    [render-text]="true"
+    [original-size]="false"
+    [(page)]="pageIdx"
+    (pages-initialized)="pageInitialized($event)"
+    (after-load-complete)="afterLoadComplete($event)"
+    class="signDoc"
+  ></pdf-viewer>
+</section>

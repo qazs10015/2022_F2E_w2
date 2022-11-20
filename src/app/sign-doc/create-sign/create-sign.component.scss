@@ -1,0 +1,160 @@
+@import "mixin";
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+
+  .chooseSign {
+    width: 240px;
+    height: 40px;
+    background: var(--white);
+    border-radius: 14px;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--primary);
+        }
+
+        &.active {
+          margin: 0;
+          a {
+            width: 120px;
+            height: 40px;
+            background: linear-gradient(180deg, #35a483 0%, #077854 100%);
+            border-radius: 14px;
+            border: 0;
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+.content {
+  width: 343px;
+  height: 75vh;
+  .chooseColors {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
+    li {
+      margin: 0 10px;
+    }
+    .blackSolid {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      background-color: black;
+      border-radius: 50%;
+      &.active::after {
+        content: "";
+        width: 35px;
+        height: 35px;
+        border: black solid 2px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        transform: scale(1.2);
+      }
+    }
+    .blueSolid {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      background-color: blue;
+      border-radius: 50%;
+      &.active::after {
+        content: "";
+        width: 35px;
+        height: 35px;
+        border: blue solid 2px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        transform: scale(1.2);
+      }
+    }
+    .redSolid {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      background-color: red;
+      border-radius: 50%;
+      &.active::after {
+        content: "";
+        width: 35px;
+        height: 35px;
+        border: red solid 2px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .signContainer {
+    width: 100%;
+    height: 100%;
+    .signRender {
+      width: 100%;
+      // height: 60vh;
+      background: var(--white);
+      border-radius: 26px;
+      margin-bottom: 1rem;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      li {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 165px;
+          height: 56px;
+          border-radius: 16px;
+          &.createSignButton {
+            background: linear-gradient(180deg, #35a483 0%, #077854 100%);
+            color: var(--white);
+            border: 0;
+          }
+          &.clearSignButton {
+            background: var(--white);
+            border: 1px solid var(--primary);
+
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}

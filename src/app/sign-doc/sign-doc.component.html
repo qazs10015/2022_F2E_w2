@@ -1,0 +1,46 @@
+<div class="container">
+  <router-outlet></router-outlet>
+
+  <section class="bottom">
+    <ul>
+      <li (click)="signFuncs(funcList.SIGN)">
+        <div class="icon" [class.active]="currentFunc === funcList.SIGN">
+          <span class="material-symbols-outlined"> edit </span>
+        </div>
+        <a>簽名</a>
+      </li>
+      <li (click)="signFuncs(funcList.PREVIEW)">
+        <div class="icon" [class.active]="currentFunc === funcList.PREVIEW">
+          <span class="material-symbols-outlined"> article </span>
+        </div>
+        <a>預覽文件</a>
+      </li>
+      <!-- <li>
+      <div class="icon" [class.active]="currentFunc === funcList.CHECK">
+        <span class="material-symbols-outlined"> check </span>
+      </div>
+      <a
+        (click)="signFuncs(funcList.CHECK)"
+        [class.active]="currentFunc === funcList.CHECK"
+        >勾選</a
+      >
+    </li> -->
+      <li (click)="signFuncs(funcList.DATE)">
+        <div class="icon" [class.active]="currentFunc === funcList.DATE">
+          <span class="material-symbols-outlined"> calendar_month </span>
+        </div>
+        <a>日期</a>
+      </li>
+      <!-- <li>
+      <div class="icon" [class.active]="currentFunc === funcList.TEXT">
+        <span class="material-symbols-outlined"> title </span>
+      </div>
+      <a
+        (click)="signFuncs(funcList.TEXT)"
+        [class.active]="currentFunc === funcList.TEXT"
+        >插入文字</a
+      >
+    </li> -->
+    </ul>
+  </section>
+</div>

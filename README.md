@@ -51,6 +51,7 @@ src
 
 * 其他套件：
   * PDF.js：[官網](https://mozilla.github.io/pdf.js/)、[GitHub](https://github.com/mozilla/pdf.js/)
+    * 本專用使用的是 Angular 版本的 PDF.js-[ng2-pdf-viewer](https://github.com/VadimDez/ng2-pdf-viewer#readme)
   * fabric.js：[官網](http://fabricjs.com/)、[GitHub](https://github.com/fabricjs/fabric.js)
   * jsPDF：[Documentation](http://raw.githack.com/MrRio/jsPDF/master/docs/index.html)、[GitHub](https://github.com/parallax/jsPDF)
   * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)、[Online Lottie JSON Editor](https://lottiefiles.com/tools/json-editor)

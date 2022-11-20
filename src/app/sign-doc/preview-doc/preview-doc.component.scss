@@ -1,0 +1,57 @@
+@import "mixin";
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 204px;
+    height: 58px;
+    background: var(--white);
+    border-radius: 16px;
+    margin-right: 5px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      border-radius: 12px;
+      color: var(--white);
+      border: 0;
+      font-size: 6px;
+    }
+  }
+
+  .btnSign {
+    background: linear-gradient(180deg, #35a483 0%, #077854 100%);
+    border-radius: 16px;
+    color: var(--white);
+    border: 0;
+    width: 130px;
+    height: 58px;
+  }
+}
+
+.content {
+  position: relative;
+  height: 75vh;
+  .signDoc {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 343px;
+    height: 75vh;
+
+    @include tablet() {
+    }
+
+    @include pc() {
+    }
+  }
+}

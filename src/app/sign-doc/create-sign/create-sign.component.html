@@ -1,0 +1,63 @@
+<section class="top">
+  <div class="chooseSign">
+    <ul>
+      <li
+        (click)="changeSignMethod(chooseSignMethod.CREATE)"
+        [class.active]="currentSignMethod === chooseSignMethod.CREATE"
+      >
+        <a>手寫簽名</a>
+      </li>
+      <li
+        (click)="changeSignMethod(chooseSignMethod.IMPORT); uploader.click()"
+        [class.active]="currentSignMethod === chooseSignMethod.IMPORT"
+      >
+        <a>匯入簽名檔</a>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="content">
+  <ng-container [ngSwitch]="currentSignMethod">
+    <ng-container *ngSwitchCase="chooseSignMethod.CREATE">
+      <ul class="chooseColors">
+        <li
+          class="blackSolid"
+          [class.active]="currentColorSolid === chooseColorSolid.BLACK"
+          (click)="changeColorSolid(chooseColorSolid.BLACK)"
+        ></li>
+        <li
+          class="blueSolid"
+          [class.active]="currentColorSolid === chooseColorSolid.BLUE"
+          (click)="changeColorSolid(chooseColorSolid.BLUE)"
+        ></li>
+        <li
+          class="redSolid"
+          [class.active]="currentColorSolid === chooseColorSolid.RED"
+          (click)="changeColorSolid(chooseColorSolid.RED)"
+        ></li>
+      </ul>
+    </ng-container>
+    <ng-container *ngSwitchDefault> </ng-container>
+  </ng-container>
+  <div class="signContainer">
+    <div class="signRender">
+      <canvas #canvas id="canvas"></canvas>
+    </div>
+    <ul>
+      <li>
+        <a class="clearSignButton" (click)="clearCanvas()">清除</a>
+      </li>
+      <li>
+        <a class="createSignButton" (click)="createSignToImage()">建立簽名</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<input
+  hidden
+  #uploader
+  type="file"
+  (change)="onUpload($event)"
+  accept="image/png"
+/>
