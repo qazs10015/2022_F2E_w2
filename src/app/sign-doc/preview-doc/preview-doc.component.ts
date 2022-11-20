@@ -45,17 +45,6 @@ export class PreviewDocComponent implements OnInit, OnDestroy {
 
     this.pdfUtilityService.today$.pipe(takeUntil(this.destroy$)).subscribe((today) =>
       this.canvas.add(new fabric.Textbox(today)))
-    // this.canvas.setWidth(300);
-    // this.canvas.setHeight(600);
-
-
-    // const doc = new jsPDF();
-    // doc.
-    // const imageData = localStorage.getItem('signData');
-    // doc.loadFile(localStorage.getItem('pdfData')!);
-    // doc.text("Hello world!", 10, 10);
-    // doc.addImage(imageData!, "JPEG", 15, 40, 40, 40);
-    // doc.save("a4.pdf");
 
   }
 
@@ -64,6 +53,7 @@ export class PreviewDocComponent implements OnInit, OnDestroy {
   }
 
   async printPDF(pdfDocument: any) {
+    // 讀取 pdf 第一頁的資料並轉為 canvas
     const pdfPage = await pdfDocument!.getPage(1)
     const viewport = pdfPage!.getViewport({ scale: 0.7 });
     const canvas = document.createElement('canvas');
@@ -91,12 +81,14 @@ export class PreviewDocComponent implements OnInit, OnDestroy {
     const pdfData = await this.printPDF(event);
     // console.log(pdfData);
 
+    // 載入 pdf canvas 並設為 背景
     fabric.Image.fromURL(pdfData.toDataURL(), (img) => {
       this.canvas.setWidth(img.width!)
       this.canvas.setHeight(img.height!)
       this.canvas.setBackgroundImage(img, () => { });
     });
 
+    // 加入簽名檔
     setTimeout(() => {
       fabric.Image.fromURL(localStorage.getItem('signData')!, (img) => {
         img.top = 400;
@@ -107,9 +99,6 @@ export class PreviewDocComponent implements OnInit, OnDestroy {
       });
     }, 1000);
   }
-
-
-
 
 
   /** 換頁 */

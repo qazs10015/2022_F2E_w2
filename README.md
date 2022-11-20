@@ -24,23 +24,19 @@
 ```
 src
  | --- app
- |       | --- story-board1 (分鏡1)
- |       | --- story-board2 (分鏡2)
- |       | --- story-board3 (分鏡3)
- |       | --- story-board4 (分鏡4)
- |       | --- story-board5 (分鏡5)
- |       | --- story-board6 (分鏡6)
- |       | --- story-board7 (分鏡7)
- |       | --- story-board8 (分鏡8)
- |       | --- story-board9 (分鏡9)
- |       | --- app-routing.module.ts
- |       | --- app.component.html
- |       | --- app.component.scss
- |       | --- app.component.ts
- |       | --- app.module.ts
+ | --- animes (設計師提供的動畫檔)
+ | --- service 
+ | --- interface 
+ | --- sign-doc
+ |       | --- create-sign (建立/上傳簽名檔)
+ |       | --- preview-doc (瀏覽 pdf 並可依位置放上簽名檔並儲存)
+ | --- app-routing.module.ts
+ | --- app.component.html
+ | --- app.component.scss
+ | --- app.component.ts
+ | --- app.module.ts
  |
  | --- assets (images、styles、fonts)
- | --- shared (共用元件)
 ```
 
 ## 使用技術
@@ -53,7 +49,8 @@ src
   * PDF.js：[官網](https://mozilla.github.io/pdf.js/)、[GitHub](https://github.com/mozilla/pdf.js/)
     * 本專用使用的是 Angular 版本的 PDF.js-[ng2-pdf-viewer](https://github.com/VadimDez/ng2-pdf-viewer#readme)
   * fabric.js：[官網](http://fabricjs.com/)、[GitHub](https://github.com/fabricjs/fabric.js)
+    > 使用 canvas 的套件
   * jsPDF：[Documentation](http://raw.githack.com/MrRio/jsPDF/master/docs/index.html)、[GitHub](https://github.com/parallax/jsPDF)
+    > 儲存自定義的 pdf
   * ngx-lottie：[GitHub](https://github.com/ngx-lottie/ngx-lottie)、[Online Lottie JSON Editor](https://lottiefiles.com/tools/json-editor)
   * sweetalert2：[npm](https://www.npmjs.com/package/sweetalert2)
-
