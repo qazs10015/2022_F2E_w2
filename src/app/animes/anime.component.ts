@@ -5,6 +5,7 @@ import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 import { Router } from '@angular/router';
 import { DialogConfigModel } from '../interfaces/DialogConfigModel';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-anime',
@@ -17,7 +18,7 @@ export class AnimeComponent implements OnInit, OnChanges {
   displayText = '上傳中...'
 
   options: AnimationOptions = {
-    path: '/assets/animations/signLoading.json',
+    path: environment.baseUrl + '/assets/animations/signLoading.json',
   };
 
   constructor(private router: Router, private dialogService: DialogService) { }
