@@ -4,7 +4,6 @@ import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   // { path: 'signDoc', component: SignDocComponent },
   {
@@ -13,6 +12,11 @@ const routes: Routes = [
   },
   { path: 'history', component: HistoryComponent },
   { path: '**', component: HomeComponent },
+  {
+    path: '**',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
