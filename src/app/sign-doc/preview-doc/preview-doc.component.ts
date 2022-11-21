@@ -55,7 +55,7 @@ export class PreviewDocComponent implements OnInit, OnDestroy {
   async printPDF(pdfDocument: any) {
     // 讀取 pdf 第一頁的資料並轉為 canvas
     const pdfPage = await pdfDocument!.getPage(1)
-    const viewport = pdfPage!.getViewport({ scale: 0.7 });
+    const viewport = pdfPage!.getViewport({ scale: 0.6 });
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     canvas.height = viewport.height;
