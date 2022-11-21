@@ -11,7 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./sign-doc/sign-doc.module').then(m => m.SignDocModule)
   },
   { path: 'history', component: HistoryComponent },
-  { path: '**', component: HomeComponent },
   {
     path: '**',
     redirectTo: '/home',
